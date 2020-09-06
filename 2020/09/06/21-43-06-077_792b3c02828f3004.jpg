@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.49.2" />
+
+<link rel="apple-touch-icon" href="https://developer.smartnews.com/blog/images/logo.png">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://developer.smartnews.com/blog/feed">
+
+<link rel="canonical" href="https://developer.smartnews.com/blog/">
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7cLato:400,700" rel="stylesheet">
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="icon" href="https://developer.smartnews.com/blog/images/icon_60.png" type="image/png">
+    <link href="https://developer.smartnews.com/blog/feed" rel="feed" type="application/rss+xml" title="SmartNews Engineering Blog" >
+    <title>SmartNews Engineering Blog</title>
+    
+    <style>
+      html { font-size: 18px; background-color: rgba(236,239,241,.5);}@media (max-width: 768px) { html { font-size: 15px; }}body { color: #333; font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-size: inherit; line-height: 1.3rem; margin: 0; padding: 0;}h1, h2, h3, h4, h5 ,h6 { font-size: 1rem; font-weight: 700; line-height: 1rem; margin: 0;}hr { border: 0; border-top: 1px dashed #cfd8dc; margin: 1rem 0;}p { margin: 0; line-height: 1.3rem;}a { color: #2196f3; text-decoration: none; transition-duration: .3s;}ul, ol { margin: 0; padding: 0; line-height: 1.5rem;}table { border-collapse: collapse;}th, td { font-size: .8rem; padding: .5rem;}tr { border-bottom: 1px dashed #ddd;}/* Layouts */main,aside { display: block;}main { padding: 1rem 0 3rem 0; }aside.h { padding: 3rem 0; }main.f,aside.f { background-color: #333; border-top: 2px dashed #fff; border-bottom: 2px dashed #fff;}.l-container { position: relative; max-width: 68rem; margin: 0 auto; padding: 0 1rem;}.l-container.thin { max-width: 44rem;}.l-header { background-image: url(https://developer.smartnews.com/blog/images/bg-body.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); padding: 1rem 0; text-align: top;}.l-header .description { margin-top: .5rem; font-size: .8rem;}.l-footer { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); font-size: .6rem; font-weight: 700; padding: 1rem 0;}@media (max-width: 768px) { .l-sidebar { margin-top: 4rem; }}.mrow { margin: 0 -1rem; overflow: hidden;}.mcol { box-sizing: border-box; float: left; padding: 0 1rem;}.c6 { width: 50%; }.c4 { width: 33.26323833%; }.c8 { width: 66.66666%; }@media (max-width: 768px) { .mcol { width: 100%; float: none; }}.logo a { font-size: 1.8rem; line-height: 1.5rem; font-weight: 400; color: #fff;}.articles { margin: -1rem 0; margin-bottom: 1rem;}.articles.sm { margin: -.5rem 0; margin-bottom: 0;}article { border-radius: 4px; overflow: hidden;}article.li { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); height: 20rem; overflow: hidden; margin: 1rem 0;}article.li > a { display: block; color: #333;}article.li .inner { padding: 1rem;}article.li .thumb { height: 8rem;}article.li .title { color: #333; font-size: 1.2rem; line-height: 1.5rem; margin-bottom: .5rem;}article.li .summary { font-size: .8rem; height: 6rem; overflow: hidden; margin-top: 1rem;}article.li .summary::after { content: '...';}article.lism { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin: .5rem 0;}article.lism::after { content: ''; display: block; clear: both;}article.lism > a { display: block; color: #333;}article.lism .inner { display: table-cell; vertical-align: middle; height: 5rem; padding: 0 .75rem;}article.lism .thumb { width: 5rem; height: 5rem; float: left;}article.lism .title { font-weight: 700; font-size: .8rem; margin-bottom: .25rem;}article.sn { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); margin-bottom: 1rem;}article.sn .thumb { height: 20rem;}@media (max-width: 768px) { article.sn .thumb { height: 10rem; }}article.sn > .article-header,article.sn > .article-body,article.sn .article-footer { padding: 2rem;}article.sn > .article-body { padding: 0 2rem;}@media (max-width: 768px) { article.sn > .article-header, article.sn > .article-body, article.sn .article-footer { padding: 1rem; } article.sn > .article-body { padding: 0 1rem; }}article.sn > .article-header .title { font-size: 1.8rem; line-height: 2rem; margin-bottom: .5rem;}@media (max-width: 768px) { article.sn > .article-header .title { font-size: 1.4rem; line-height: 1.7rem; }}article.sn > .article-header .facts { margin-bottom: 1rem;}article.sn > .article-body { margin-bottom: 1.7rem;}article.sn > .article-body h2 { border-bottom: .25rem solid #333; font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; padding: .5rem 0;}article.sn > .article-body h3 { border-left: .5rem solid #333; line-height: 1.5rem; margin: 1.5rem 0; padding: .125rem .5rem;}article.sn > .article-body ul,article.sn > .article-body ol { margin: 1.5rem 0; padding-left: 1.5rem;}article.sn > .article-body li { padding-bottom: .5rem; line-height: 1.5rem;}article.sn > .article-body li:last-child { padding-bottom: 0;}article.sn > .article-body p { margin: 1rem 0; line-height: 1.7rem;}article.sn > .article-body strong,article.sn > .article-body em { font-style: normal; font-weight: 700;}article.sn > .article-body strong { box-shadow: 0 -.5rem 0 0 #ffc107 inset;}article.sn > .article-body em { color: #8bc34a;}article.sn > .article-body code,article.sn > .article-body pre { font-family: Menlo, Consolas, monospace; font-size: .7rem;}article.sn > .article-body pre { background-color: #333; color: #fff; line-height: 1rem; margin: 1.5rem -2rem; overflow: auto;}@media (max-width: 768px) { article.sn > .article-body pre { margin: 1.5rem -1rem; }}article.sn > .article-body pre > code { display: block; padding: 1rem 2rem;}@media (max-width: 768px) { article.sn > .article-body pre > code { padding: 1rem; }}article.sn > .article-body p code { background-color: #eceff1; color: #333; border-radius: 4px; margin: 0 .25rem; padding: .375rem; white-space: nowrap;}article.sn > .article-body blockquote { position: relative; border-left: .25rem solid #333; font-size: .8rem; padding: .125rem 1rem; margin: 1.5rem 0;}@media (max-width: 768px) { article.sn > .article-body blockquote { font-size: 1rem; }}article.sn > .article-body blockquote p { margin: .5rem 0; line-height: 1rem;}article.sn > .article-body figure { margin: 1.5rem 0; display: block; text-align:center;}article.sn > .article-body figure img,article.sn > .article-body figure amp-img { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); max-width: 100%;}article.sn > .article-body figcaption { color: #cfd8dc; font-size: .8rem; padding: .8rem;}.facts li { display: inline; font-size: .8rem; margin-right: 1rem;}.facts i { color: #cfd8dc; margin-right: .5em;}.facts.sm li { font-size: .7rem;}.sections.sidebar { margin: -1rem 0;}.sections.footer { margin: -1rem 0;}section.sidebar { margin: 2rem 0;}section.sidebar > header { font-size: .8rem; font-weight: 700; letter-spacing: 4px; text-align: center; margin: 1.5rem 0;}section.footer { margin: 1rem 0;}section.footer > header { font-size: .8rem; margin: .5rem 0;}section.footer > header::before { content: "- ";}section.footer > header a { font-weight: 700; color: #333; text-decoration: underline;}.terms { margin: -.25rem;}.terms li { display: inline-block;}.terms a { display: block; float: left; background-color: #333; border-radius: 4px; color: #fff; font-size: .7rem; margin: .25rem; padding: 0 .75rem; line-height: 1.75rem;}.paging { text-align: center; padding: 1rem 0;}.paging a { display: inline-block; background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); border-radius: 4px; color: #333; padding: 0 1rem; line-height: 3rem;}.page-title { text-align: center; margin: 1rem 0;}.page-title::after { content: ''; display: block; border-bottom: .25rem solid #333; width: 3rem; margin: 1.5rem auto;}.page-title > .title { font-size: 1.2rem; line-height: 1.5rem;}/* Parts:breadcrumb */.crumb ol { text-overflow: ellipsis; color: #cfd8dc; white-space: nowrap; overflow: hidden;}.crumb li { display: inline; font-size: .8rem;}.crumb li::after { content: '›'; margin: 0 .25rem 0 .5rem;}.crumb li:last-child::after { content: '';}.crumb a { color: #cfd8dc;}.crumb i { margin-right: .5em;}.share { padding: 0;}.share a { display: inline-block; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); min-width: 1rem; height: 2rem; border-radius: 4px; color: #333; font-size: .8rem; font-weight: 700; line-height: 2rem; text-align: center; padding: 0 .5rem;}.adj article.lism { margin-bottom: 1rem;}.adj header { font-weight: 700; font-size: .8rem;}.toc { padding: 0 2rem;}@media (max-width: 768px) { .toc { padding: 0 1rem; }}.toc { margin: 1rem 0;}.toc nav>ul { background-color: #eceff1; border-radius: 4px; display: inline-block; font-size: .8rem; padding: .5rem 1rem; word-break: break-all; list-style: none;}.toc ul { padding: 0;}.toc ul ul { padding-left: 1rem;}.toc ul ul ul { padding-left: 1rem;}.toc li { color: #90a4ae;}.toc ul ul>li { font-weight: 700; margin: .5rem 0; list-style-type: decimal;}.toc ul ul ul>li { list-style-type: disc; font-weight: 500;}.author { background-color: #fff; box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05); padding: 1rem; border-radius: 4px; text-align: center;}.author .author-thumb { margin: 0 auto 1rem; width: 6rem; height: 6rem; border-radius: 50%; background-color: #eceff1; background-size: cover; background-position: center;}.author .author-name { margin-bottom: .5rem; font-weight: 700;}.author .author-facts { margin-bottom: 1rem;}.author .author-facts li { display: inline;}.author .author-facts li a { display: inline-block; background-color: #eceff1; width: 1.75rem; height: 1.75rem; line-height: 1.75rem; text-align: center; color: #333; font-size: .8rem; border-radius: 2px;}.author .author-facts li a:hover { color: #fff; background-color: #333;}.author .author-description { text-align: left; font-size: .8rem;}.author .author-description p { margin: .5rem 0;}.thumb { background-image: url(https://developer.smartnews.com/blog/images/sn-1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-335131fe6c241afaabd24b75d843f36f { background-image: url(https://developer.smartnews.com/blog/images/2019/03/hadoop_conf_japan_2019/thumbnail.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-dca241086eb78a695e39f80a28b462a2 { background-image: url(https://developer.smartnews.com/blog/images/2019/01/akamai-etp2/etp-clientconnector.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-88f1121b2471ecd256ffce1e2931a1b2 { background-image: url(https://developer.smartnews.com/blog/images/2019/01/jjug_ccc_2018_fall/thumbnail.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-93ebd6b2271257d85e7469bc8c2064ad { background-image: url(https://developer.smartnews.com/blog/images/2018/12/sre/thumbnail.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-c0fe25f70d543cc982ba99a3ac755c87 { background-image: url(https://developer.smartnews.com/blog/images/2018/10/jamboard/thumbnail.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-adb5ae0ad923551bb136404f68a70265 { background-image: url(https://developer.smartnews.com/blog/images/2018/09/deep-insights/20150913.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-008ec48635254dcd67ad3dc589636e32 { background-image: url(https://developer.smartnews.com/blog/images/2018/08/who-wakes-up-a-sleeping-beauty/us_office_02.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-ddaa74cf234eb94a3b8a7a8cd151254c { background-image: url(https://developer.smartnews.com/blog/images/2018/08/slack-tool/thumbnail.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-2878284d08d9520d181d2bb90cfa4ca0 { background-image: url(https://developer.smartnews.com/blog/images/2018/08/company-benefits/thumbnail.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-4200de9e0d84440fa4dcc652372fc5ed { background-image: url(https://developer.smartnews.com/blog/images/2018/07/line_developer_meetup/pic_mini.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-656639f49772ce5edc5e9b34e93e3f93 { background-image: url(https://developer.smartnews.com/blog/images/2018/07/incident_review/5aeccb28-e7d2-d915-f84e-10bf87b9dd08.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-db4a122863152f0ce32c967e79e037c2 { background-image: url(https://developer.smartnews.com/blog/images/2018/07/product_manager/us_office.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-3ed4cb3110dca146277ac951cb7c052c { background-image: url(https://developer.smartnews.com/blog/images/2018/06/product_designer/thumbnail.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-8e71a2b6f3da22b18fcab8d16436369b { background-image: url(https://developer.smartnews.com/blog/images/2018/06/byebye-chikyu.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-e5a5c09bcbb04a1a7803e5b74a711b3a { background-image: url(https://developer.smartnews.com/blog/images/2018/05/jjug-ccc-2018-spring.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-c3e59775394eef607c2d53ef8a25e5f9 { background-image: url(https://developer.smartnews.com/blog/images/2018/05/r-sushi.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-7b987885b0597be513fd79a821f8879e { background-image: url(https://developer.smartnews.com/blog/images/2018/04/video-meeting.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-647479645c08dba4c73b05ccd0fe8b0d { background-image: url(https://developer.smartnews.com/blog/images/2018/04/maven-central.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-bd3e2fce80a4e2ee6688b433f2f6b403 { background-image: url(https://developer.smartnews.com/blog/images/2018/04/fig-nlp.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-b963795ca2c42043677a1bbc01bde854 { background-image: url(https://developer.smartnews.com/blog/images/2018/03/akamai-etp-logo.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-47560afcd6e1a39dc07f0dab4b3e5e45 { background-image: url(https://developer.smartnews.com/blog/images/2018/03/coupon-channel-logo.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-552bfb45c5e8374f45b264db33a40591 { background-image: url(https://developer.smartnews.com/blog/images/2018/02/us-engineering.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-d9732e1776e33e463d5fdea772b98163 { background-image: url(https://developer.smartnews.com/blog/images/2018/01/ios11book-1.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-93cd76d2a001b00e812bca5b1ddac13e { background-image: url(https://developer.smartnews.com/blog/images/2018/01/push-improvement-cover.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-3dadb6c8ff5f15090aea7f5b4d55a613 { background-image: url(https://developer.smartnews.com/blog/images/2017/12/cover.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-a4c5bd0374dd9b8b1be9d4de2576d5a4 { background-image: url(https://developer.smartnews.com/blog/images/2017/11/bonfireios3-2.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-dfe60d75d9e637bdf5efb83df8dddc7b { background-image: url(https://developer.smartnews.com/blog/images/2017/11/shibuya-apk-venue.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-a4df285dd146c6a0bd9f2e5e75ecff11 { background-image: url(https://developer.smartnews.com/blog/images/2017/11/cover1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-516fd21660732fc17be0ca6d13a880ab { background-image: url(https://developer.smartnews.com/blog/images/2017/10/IMG_20171010_204439.jpg); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-c0b2021245e1aa289ac47d23bf36b07f { background-image: url(https://developer.smartnews.com/blog/images/image1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-8087fb52f24fc61ec7481de1189ba7e4 { background-image: url(https://developer.smartnews.com/blog/images/sn-1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-27a2b5d91105439567974379b7fccac6 { background-image: url(https://developer.smartnews.com/blog/images/chikyukun2.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-6981f8c975c95a6b5d5c06d5c435d830 { background-image: url(https://developer.smartnews.com/blog/images/chikyukun1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-f2bd4c78204393bc5c48f519d59ec62d { background-image: url(https://developer.smartnews.com/blog/images/sn-1.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-7c9d553945aece9916cb636e35e3f04d { background-image: url(https://developer.smartnews.com/blog/images/chikyukun4.png); background-size: contain; background-position: center; background-repeat: no-repeat;}.thumb-0887ba6dbb5ca0e7c54595afede33b5b { background-image: url(https://developer.smartnews.com/blog/images/sn-logo2.png); background-size: contain; background-position: center; background-repeat: no-repeat;}
+      
+       body { font-family: Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif; } 
+       .h-logo { font-family: Lobster, cursive; } 
+    </style>
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-32191279-5', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+          <a href="https://developer.smartnews.com/blog/">SmartNews Engineering Blog</a>
+        </div>
+        
+
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        
+<div class="mrow">
+  <div class="mcol c8">
+
+    
+
+    <div class="articles">
+      <div class="mrow">
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2019/03/hadoop_conf_japan_2019/">
+    <div class="thumb thumb-335131fe6c241afaabd24b75d843f36f"></div>
+
+    <div class="inner">
+      <h2 class="title">「Hadoop / Spark Conference Japan 2019」で登壇しました</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-03-27T14:00:00JST">Mar 27, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+      <div class="summary">こんにちは、Data Engineer の廣瀬（@satoshihirose）です。 3月14日に、Hadoop / Spark Conference Japan 2019 にて、「Cloud-Nativeなデー</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2019/01/akamai-etp2/">
+    <div class="thumb thumb-dca241086eb78a695e39f80a28b462a2"></div>
+
+    <div class="inner">
+      <h2 class="title">Akamai Enterprise Threat Protector (ETP)  その続き</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-01-28T13:00:00JST">Jan 28, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+      <div class="summary">こんにちは、Corporate Engineering Teamの和田です。 当社ではマルウェアやランサムウェアなどの対策として、Akamaiさんが提供する Enterprise Threat Protector (E</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2019/01/jjug_ccc_2018_fall/">
+    <div class="thumb thumb-88f1121b2471ecd256ffce1e2931a1b2"></div>
+
+    <div class="inner">
+      <h2 class="title">JJUG CCC 2018 Fall で弊社エンジニア 2 名が登壇しました</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-01-10T00:00:00JST">Jan 10, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+      <div class="summary">スマートニュース株式会社の西尾と申します。 12/15（土）、ベルサール新宿グランドにてJJUG CCC 2018 Fallが開催されました。JJUG CCCは</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/12/sre/">
+    <div class="thumb thumb-93ebd6b2271257d85e7469bc8c2064ad"></div>
+
+    <div class="inner">
+      <h2 class="title">「hbstudy#86 SRE大全：スマートニュース編」で登壇しました</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-12-18T13:00:00JST">Dec 18, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">Site Reliability Engineering チームの Engineering Manager 尾形(@nobu666)です。12月6日に、株式会社ハートビーツ様主催の「hbstudy#86」にて、スマートニュースのS</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/10/jamboard/">
+    <div class="thumb thumb-c0fe25f70d543cc982ba99a3ac755c87"></div>
+
+    <div class="inner">
+      <h2 class="title">Jamboardを導入しました</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-10-25T14:00:00JST">Oct 25, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">こんにちは、コーポレートエンジニアリングの和田です。 日本でもようやく最近購入することが可能になった、Googleの電子ホワイトボード「Jam</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/09/deep-insights/">
+    <div class="thumb thumb-adb5ae0ad923551bb136404f68a70265"></div>
+
+    <div class="inner">
+      <h2 class="title">スマホの画面で記事をよりよく読んでもらうために</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-09-26T11:00:00JST">Sep 26, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">スマートニュース株式会社の小田秀匡（おだひでまさ）・田島将太（たじましょうた）・山口亜祐子（やまぐちあゆこ）です。 小田はサーバーサイドの開発</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/08/who-wakes-up-a-sleeping-beauty/">
+    <div class="thumb thumb-008ec48635254dcd67ad3dc589636e32"></div>
+
+    <div class="inner">
+      <h2 class="title">「眠れる森の美女」を起こすのは?</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-09-06T13:00:00JST">Sep 6, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">こんにちは! スマートニュースで人事責任者をしている茅根（ちのね）と申します。コードも書けない自分が Engineering Blog に参加するのはとても恐縮してしまうとこ</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/08/slack-tool/">
+    <div class="thumb thumb-ddaa74cf234eb94a3b8a7a8cd151254c"></div>
+
+    <div class="inner">
+      <h2 class="title">Slack チャンネル招待ツールを作りました</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-08-30T13:00:00JST">Aug 30, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">みなさまこんにちは、コーポレートエンジニアリングチームの和田です。 私たちコーポレートエンジニアリングチームは、社内ネットワークの管理やシステ</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/08/company-benefits/">
+    <div class="thumb thumb-2878284d08d9520d181d2bb90cfa4ca0"></div>
+
+    <div class="inner">
+      <h2 class="title">イカした福利厚生を紹介するよ！</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-08-10T10:00:00JST">Aug 10, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">こんちは、たむたむです。 毎回本名なんだっけと言われますが、受付のシステムには本名のほかにハンドルネームが登録されているため、お客様が来ても戸</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://developer.smartnews.com/blog/2018/07/line_developer_meetup/">
+    <div class="thumb thumb-4200de9e0d84440fa4dcc652372fc5ed"></div>
+
+    <div class="inner">
+      <h2 class="title">&#34;ニュースメディアにおける広告技術&#34; LINE Developer Meetupでの発表</h2>
+
+      <ul class="facts">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-07-23T13:00:00JST">Jul 23, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+      <div class="summary">スマートニュース株式会社の西尾と申します。広告開発チームのエンジニアリングマネージャをやっています。もう一月前になってしまいましたが、201</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+      </div>
+    </div>
+
+    
+<nav class="paging">
+  
+
+  
+  <a href="https://developer.smartnews.com/blog/page/2/" rel="next">Next</a>
+  
+</nav>
+
+
+  </div>
+  <div class="mcol c4">
+    <aside class="l-sidebar">
+
+  <div class="sections sidebar">
+    
+
+    <section class="sidebar">
+  <header>PRESENTATION MATERIALS</header>
+  <div>
+    <div class="articles sm">
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2013/01/01/first-post/">
+    <div class="thumb thumb-0887ba6dbb5ca0e7c54595afede33b5b"></div>
+
+    <div class="inner">
+      <div class="title">発表資料ページ</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2013-01-01T08:50:37JST">Jan 1, 2013</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2013</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+    </div>
+  </div>
+</section>
+
+    <section class="sidebar">
+  <header>LATEST ENTRIES</header>
+  <div>
+    <div class="articles sm">
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2019/03/hadoop_conf_japan_2019/">
+    <div class="thumb thumb-335131fe6c241afaabd24b75d843f36f"></div>
+
+    <div class="inner">
+      <div class="title">「Hadoop / Spark Conference Japan 2019」で登壇しました</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-03-27T14:00:00JST">Mar 27, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2019/01/akamai-etp2/">
+    <div class="thumb thumb-dca241086eb78a695e39f80a28b462a2"></div>
+
+    <div class="inner">
+      <div class="title">Akamai Enterprise Threat Protector (ETP)  その続き</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-01-28T13:00:00JST">Jan 28, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2019/01/jjug_ccc_2018_fall/">
+    <div class="thumb thumb-88f1121b2471ecd256ffce1e2931a1b2"></div>
+
+    <div class="inner">
+      <div class="title">JJUG CCC 2018 Fall で弊社エンジニア 2 名が登壇しました</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2019-01-10T00:00:00JST">Jan 10, 2019</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2019</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/12/sre/">
+    <div class="thumb thumb-93ebd6b2271257d85e7469bc8c2064ad"></div>
+
+    <div class="inner">
+      <div class="title">「hbstudy#86 SRE大全：スマートニュース編」で登壇しました</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-12-18T13:00:00JST">Dec 18, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/10/jamboard/">
+    <div class="thumb thumb-c0fe25f70d543cc982ba99a3ac755c87"></div>
+
+    <div class="inner">
+      <div class="title">Jamboardを導入しました</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-10-25T14:00:00JST">Oct 25, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/09/deep-insights/">
+    <div class="thumb thumb-adb5ae0ad923551bb136404f68a70265"></div>
+
+    <div class="inner">
+      <div class="title">スマホの画面で記事をよりよく読んでもらうために</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-09-26T11:00:00JST">Sep 26, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/08/who-wakes-up-a-sleeping-beauty/">
+    <div class="thumb thumb-008ec48635254dcd67ad3dc589636e32"></div>
+
+    <div class="inner">
+      <div class="title">「眠れる森の美女」を起こすのは?</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-09-06T13:00:00JST">Sep 6, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/08/slack-tool/">
+    <div class="thumb thumb-ddaa74cf234eb94a3b8a7a8cd151254c"></div>
+
+    <div class="inner">
+      <div class="title">Slack チャンネル招待ツールを作りました</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-08-30T13:00:00JST">Aug 30, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/08/company-benefits/">
+    <div class="thumb thumb-2878284d08d9520d181d2bb90cfa4ca0"></div>
+
+    <div class="inner">
+      <div class="title">イカした福利厚生を紹介するよ！</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-08-10T10:00:00JST">Aug 10, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://developer.smartnews.com/blog/2018/07/line_developer_meetup/">
+    <div class="thumb thumb-4200de9e0d84440fa4dcc652372fc5ed"></div>
+
+    <div class="inner">
+      <div class="title">&#34;ニュースメディアにおける広告技術&#34; LINE Developer Meetupでの発表</div>
+
+      <ul class="facts sm">
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-07-23T13:00:00JST">Jul 23, 2018</time></li>
+        <li><i class="fa fa-bookmark" aria-hidden="true"></i>2018</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+    </div>
+  </div>
+</section>
+
+    
+<section class="sidebar">
+  <header>CATEGORIES</header>
+  <div>
+    <ul class="terms">
+      <li><a href="https://developer.smartnews.com/blog/categories/%E3%81%9D%E3%81%AE%E4%BB%96">その他</a></li><li><a href="https://developer.smartnews.com/blog/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a></li><li><a href="https://developer.smartnews.com/blog/categories/ios">ios</a></li><li><a href="https://developer.smartnews.com/blog/categories/java">java</a></li><li><a href="https://developer.smartnews.com/blog/categories/android">android</a></li><li><a href="https://developer.smartnews.com/blog/categories/devops">devops</a></li><li><a href="https://developer.smartnews.com/blog/categories/fluentd">fluentd</a></li><li><a href="https://developer.smartnews.com/blog/categories/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a></li><li><a href="https://developer.smartnews.com/blog/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92">機械学習</a></li><li><a href="https://developer.smartnews.com/blog/categories/community">community</a></li>
+    </ul>
+  </div>
+</section>
+
+
+
+    
+
+  </div>
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><span class="h-logo">&copy; SmartNews Engineering Blog</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        },
+        "HTML-CSS": {
+          scale: 80
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
+
